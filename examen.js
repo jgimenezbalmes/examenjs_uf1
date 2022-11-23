@@ -1,6 +1,6 @@
-
-let valor = parseInt(document.getElementById("inputmulti").value);
+//Comptador per a l'exercici 2
 let comptador = 1;
+
 //Exercici 1
 function coloret() {
 
@@ -16,7 +16,6 @@ function coloret() {
 
 //Exercici 2 
 function coloret2() {
-    
 
     if (document.getElementById("botonet2").style.backgroundColor == "white") {
         if (comptador == 2) {
@@ -24,7 +23,7 @@ function coloret2() {
             document.getElementsByTagName("body")[0].style.backgroundColor = "white";
             comptador = 1;
         }
-        else{
+        else {
             comptador++;
         }
     }
@@ -34,7 +33,7 @@ function coloret2() {
             document.getElementsByTagName("body")[0].style.backgroundColor = "red";
             comptador = 1;
         }
-        else{
+        else {
             comptador++;
         }
     }
@@ -42,6 +41,7 @@ function coloret2() {
 
 //Exercici 3 
 function multi() {
+    let valor = parseInt(document.getElementById("inputmulti").value);
     let a = valor;
     let multi = 1;
     let resposta = ""
@@ -89,8 +89,8 @@ function pintaQuadrant() {
     for (var i = 0; i < rows.length; i++) {
         matrix.push(rows[i].children)
     }
-    for (let i = parseInt(matrix.length / 2); i <matrix.length; i++) {
-        for (let j = 0; j <= parseInt(matrix[i].length / 2-1); j++) {
+    for (let i = parseInt(matrix.length / 2); i < matrix.length; i++) {
+        for (let j = 0; j <= parseInt(matrix[i].length / 2 - 1); j++) {
             matrix[i][j].style.backgroundColor = "red";
         }
     }
@@ -104,17 +104,17 @@ function pintaDiagonals() {
     for (var i = 0; i < rows.length; i++) {
         matrix.push(rows[i].children)
     }
-    for (let i = 0; i <matrix.length; i++) {
-        for (let j = 0; j <matrix[i].length; j++) {
-            if (i==j){
-            matrix[i][j].style.backgroundColor = "red";
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            if (i == j) {
+                matrix[i][j].style.backgroundColor = "red";
             }
         }
     }
-    for (let i=matrix.length-1; i>=0; i--){
-        for (let j=0; j<matrix[0].length; j++){
-            if ((matrix.length-1)-j==i){
-            matrix[i][j].style.backgroundColor = "red";
+    for (let i = matrix.length - 1; i >= 0; i--) {
+        for (let j = 0; j < matrix[0].length; j++) {
+            if ((matrix.length - 1) - j == i) {
+                matrix[i][j].style.backgroundColor = "red";
             }
         }
     }
